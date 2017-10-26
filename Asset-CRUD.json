@@ -1,0 +1,170 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Organicity: Asset CRUD",
+		"_postman_id": "fb998933-59e4-0dfe-8376-4887b782b6f7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[1] Get an Access Token",
+			"request": {
+				"url": "https://accounts.organicity.eu/realms/organicity/protocol/openid-connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZXhwZXJpbWVudC01OWYyMGY2Y2EwNGM1MjVkNThjYzM1ODA6NzY0NDJmNDQtYTA1Mi00MTdkLWE3YTItMjkzNDYzMmFhMTMx",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "[2] Push an Asset",
+			"request": {
+				"url": "https://exp.orion.organicity.eu/v2/entities",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxZmMwYWVmYi1lMTA0LTRlNGEtOWM5ZC02MWM0YmIyZjYwNzUiLCJleHAiOjE1MDkwMzgxMzEsIm5iZiI6MCwiaWF0IjoxNTA5MDM3ODMxLCJpc3MiOiJodHRwczovL2FjY291bnRzLm9yZ2FuaWNpdHkuZXUvcmVhbG1zL29yZ2FuaWNpdHkiLCJhdWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsInN1YiI6IjAxOWNmNzE3LTc3ODctNDJlYS1hNGI4LWI2NTZmMjM3ZDcxYSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwic2Vzc2lvbl9zdGF0ZSI6IjQ4ZDI1ZmEwLWFhYzUtNDVjNC1hOWFhLTIxZTdlM2E4YWYxMSIsImNsaWVudF9zZXNzaW9uIjoiMDg1ZjBmZWUtYjA2Mi00NGE3LTlmYmMtMzI5YTc3MjI1NjIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImV4cGVyaW1lbnRlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlbW8tb2NzaXRlIjp7InJvbGVzIjpbImRlbGV0ZS1hc3NldCIsInJlYWQtYXNzZXQiLCJjcmVhdGUtYXNzZXQiLCJ1cGRhdGUtYXNzZXQiXX0sInNpdGUtbWFuYWdlciI6eyJyb2xlcyI6WyJkaWN0aW9uYXJ5LXVzZXIiXX0sInNpdGUtbWFuYWdlci1kZXYiOnsicm9sZXMiOlsiZGljdGlvbmFyeS11c2VyIl19fSwiY2xpZW50SWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsImNsaWVudEhvc3QiOiIxNDEuODMuNjguNTEiLCJuYW1lIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwiY2xpZW50QWRkcmVzcyI6IjE0MS44My42OC41MSIsImVtYWlsIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwQHBsYWNlaG9sZGVyLm9yZyJ9.cgcJ-OAQpj3nvFjTQtwz346AWYEjDbAEFJ9PM9Xsry3e4If8qMv5ru-WzoQBYJJ0a3o1BjZSajhWos8h0IE4CrYQj__kMrrpQmCWzUsDZ1OUQntipePbV0NQY3iPZStjjcV3Qj9Ep_N6H2f0OQQ7BN1hVb6hIbxS52XyMW6tOC5cXJOf4NkTTiUiohEMHYnYbk9wSCNk0jZzs4gvES8EZXlFDfExQuyuzlxMS9IpVUVPPnoL-AUP06CBMMI468iGJHcIXHimYU2b6HDdwX8fXqpl0FRMpRWOzaE1JzKz4YQEnkgbYWK2hjZ0tlZJzED5fPGLMBpbXTC7NKA8v70JVQ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Application",
+						"value": "59f21638a04c525d58cc4947",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Experiment",
+						"value": "59f20f6ca04c525d58cc3580",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"urn:oc:entity:experimenters:cf2c1723-3369-4123-8b32-49abe71c0e57:59f20f6ca04c525d58cc3580:1\",\n  \"type\": \"urn:oc:entityType:demo\",\n  \"TimeInstant\": {\n    \"type\": \"urn:oc:attributeType:ISO8601\",\n    \"value\": \"2016-10-04T13:45:00.000Z\"\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "[3] Update an Asset",
+			"request": {
+				"url": "https://exp.orion.organicity.eu/v2/entities/urn:oc:entity:experimenters:cf2c1723-3369-4123-8b32-49abe71c0e57:59f20f6ca04c525d58cc3580:1/attrs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxZmMwYWVmYi1lMTA0LTRlNGEtOWM5ZC02MWM0YmIyZjYwNzUiLCJleHAiOjE1MDkwMzgxMzEsIm5iZiI6MCwiaWF0IjoxNTA5MDM3ODMxLCJpc3MiOiJodHRwczovL2FjY291bnRzLm9yZ2FuaWNpdHkuZXUvcmVhbG1zL29yZ2FuaWNpdHkiLCJhdWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsInN1YiI6IjAxOWNmNzE3LTc3ODctNDJlYS1hNGI4LWI2NTZmMjM3ZDcxYSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwic2Vzc2lvbl9zdGF0ZSI6IjQ4ZDI1ZmEwLWFhYzUtNDVjNC1hOWFhLTIxZTdlM2E4YWYxMSIsImNsaWVudF9zZXNzaW9uIjoiMDg1ZjBmZWUtYjA2Mi00NGE3LTlmYmMtMzI5YTc3MjI1NjIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImV4cGVyaW1lbnRlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlbW8tb2NzaXRlIjp7InJvbGVzIjpbImRlbGV0ZS1hc3NldCIsInJlYWQtYXNzZXQiLCJjcmVhdGUtYXNzZXQiLCJ1cGRhdGUtYXNzZXQiXX0sInNpdGUtbWFuYWdlciI6eyJyb2xlcyI6WyJkaWN0aW9uYXJ5LXVzZXIiXX0sInNpdGUtbWFuYWdlci1kZXYiOnsicm9sZXMiOlsiZGljdGlvbmFyeS11c2VyIl19fSwiY2xpZW50SWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsImNsaWVudEhvc3QiOiIxNDEuODMuNjguNTEiLCJuYW1lIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwiY2xpZW50QWRkcmVzcyI6IjE0MS44My42OC41MSIsImVtYWlsIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwQHBsYWNlaG9sZGVyLm9yZyJ9.cgcJ-OAQpj3nvFjTQtwz346AWYEjDbAEFJ9PM9Xsry3e4If8qMv5ru-WzoQBYJJ0a3o1BjZSajhWos8h0IE4CrYQj__kMrrpQmCWzUsDZ1OUQntipePbV0NQY3iPZStjjcV3Qj9Ep_N6H2f0OQQ7BN1hVb6hIbxS52XyMW6tOC5cXJOf4NkTTiUiohEMHYnYbk9wSCNk0jZzs4gvES8EZXlFDfExQuyuzlxMS9IpVUVPPnoL-AUP06CBMMI468iGJHcIXHimYU2b6HDdwX8fXqpl0FRMpRWOzaE1JzKz4YQEnkgbYWK2hjZ0tlZJzED5fPGLMBpbXTC7NKA8v70JVQ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Application",
+						"value": "59f21638a04c525d58cc4947",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Experiment",
+						"value": "59f20f6ca04c525d58cc3580",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"TimeInstant\": {\n    \"type\": \"urn:oc:attributeType:ISO8601\",\n    \"value\": \"2017-06-22T11:35:00.000Z\"\n  },\n \"location\": {\n \t\"type\": \"geo:point\",\n \t\"value\": \"53.83404, 10.704197\"\n }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "[4] Get an Asset (Discovery Service)",
+			"request": {
+				"url": "https://discovery.organicity.eu/v0/assets/urn:oc:entity:experimenters:cf2c1723-3369-4123-8b32-49abe71c0e57:59f20f6ca04c525d58cc3580:1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "[5] Delete an Asset",
+			"request": {
+				"url": "https://exp.orion.organicity.eu/v2/entities/urn:oc:entity:experimenters:cf2c1723-3369-4123-8b32-49abe71c0e57:59f20f6ca04c525d58cc3580:1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxZmMwYWVmYi1lMTA0LTRlNGEtOWM5ZC02MWM0YmIyZjYwNzUiLCJleHAiOjE1MDkwMzgxMzEsIm5iZiI6MCwiaWF0IjoxNTA5MDM3ODMxLCJpc3MiOiJodHRwczovL2FjY291bnRzLm9yZ2FuaWNpdHkuZXUvcmVhbG1zL29yZ2FuaWNpdHkiLCJhdWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsInN1YiI6IjAxOWNmNzE3LTc3ODctNDJlYS1hNGI4LWI2NTZmMjM3ZDcxYSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwic2Vzc2lvbl9zdGF0ZSI6IjQ4ZDI1ZmEwLWFhYzUtNDVjNC1hOWFhLTIxZTdlM2E4YWYxMSIsImNsaWVudF9zZXNzaW9uIjoiMDg1ZjBmZWUtYjA2Mi00NGE3LTlmYmMtMzI5YTc3MjI1NjIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImV4cGVyaW1lbnRlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlbW8tb2NzaXRlIjp7InJvbGVzIjpbImRlbGV0ZS1hc3NldCIsInJlYWQtYXNzZXQiLCJjcmVhdGUtYXNzZXQiLCJ1cGRhdGUtYXNzZXQiXX0sInNpdGUtbWFuYWdlciI6eyJyb2xlcyI6WyJkaWN0aW9uYXJ5LXVzZXIiXX0sInNpdGUtbWFuYWdlci1kZXYiOnsicm9sZXMiOlsiZGljdGlvbmFyeS11c2VyIl19fSwiY2xpZW50SWQiOiJleHBlcmltZW50LTU5ZjIwZjZjYTA0YzUyNWQ1OGNjMzU4MCIsImNsaWVudEhvc3QiOiIxNDEuODMuNjguNTEiLCJuYW1lIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwIiwiY2xpZW50QWRkcmVzcyI6IjE0MS44My42OC41MSIsImVtYWlsIjoic2VydmljZS1hY2NvdW50LWV4cGVyaW1lbnQtNTlmMjBmNmNhMDRjNTI1ZDU4Y2MzNTgwQHBsYWNlaG9sZGVyLm9yZyJ9.cgcJ-OAQpj3nvFjTQtwz346AWYEjDbAEFJ9PM9Xsry3e4If8qMv5ru-WzoQBYJJ0a3o1BjZSajhWos8h0IE4CrYQj__kMrrpQmCWzUsDZ1OUQntipePbV0NQY3iPZStjjcV3Qj9Ep_N6H2f0OQQ7BN1hVb6hIbxS52XyMW6tOC5cXJOf4NkTTiUiohEMHYnYbk9wSCNk0jZzs4gvES8EZXlFDfExQuyuzlxMS9IpVUVPPnoL-AUP06CBMMI468iGJHcIXHimYU2b6HDdwX8fXqpl0FRMpRWOzaE1JzKz4YQEnkgbYWK2hjZ0tlZJzED5fPGLMBpbXTC7NKA8v70JVQ",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Application",
+						"value": "59f21638a04c525d58cc4947",
+						"description": ""
+					},
+					{
+						"key": "X-Organicity-Experiment",
+						"value": "59f20f6ca04c525d58cc3580",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
